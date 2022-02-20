@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #E5E5E5;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 714px;
+  height: 32px;
+  left: 84px;
+  top: 32px;
+}
+
+nav .logo-xp {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+nav .nav-bar-item-1 {
+  position: absolute;
+  height: 24px;
+  left: 70px;
+}
+
+nav .nav-bar-item-2 {
+  position: absolute;
+  height: 24px;
+  left: 222px;
+}
+
+nav .nav-bar-item-3 {
+  position: absolute;
+  height: 24px;
+  left: 360px;
+}
+
+nav .nav-bar-item-4 {
+  position: absolute;
+  height: 24px;
+  left: 468px;
+}
+
+nav .nav-bar-item-5 {
+  position: absolute;
+  height: 24px;
+  left: 626px;
+}
+
+nav a p {
+  height: 24px;
+  left: 164px;
+  top: 36px;
+
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  color: #3D3D3D;
+}
+
+nav a img {
+  margin-left: 4px;
+}
+
+.buscador {
+  position: absolute;
+  width: 783px;
+  height: 268px;
+  left: 84px;
+  top: 112px;
+  background: #FFFFFF;
+  border-radius: 16px;
+}
+
+.buscador h2 {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.buscador form {
+  position: absolute;
+  width: 645.93px;
+  height: 31px;
+  left: 40px;
+  top: 109px;
+}
+
+.buscador form label {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+}
+
+.buscador form select {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+}
+
+.buscador form select option {
+  position: absolute;
+  width: 644px;
+  height: 572px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 0px 16px 16px;
+}
+
+.buscador form input {
+  position: absolute;
+  width: 174.75px;
+  height: 48px;
+  left: 0px;
+  top: 80px;
+
+  border: none;
+  background: #FFC709;
+  border-radius: 40px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  
+  color: #000000;
+}
+
+.quadrado-lateral {
+  position: absolute;
+  width: 457px;
+  height: 268px;
+  left: 899px;
+  top: 112px;
+  background: #FFFFFF;
+  border-radius: 16px;
+}

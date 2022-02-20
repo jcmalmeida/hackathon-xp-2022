@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <title>XP - Portal AAI</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <img src="./img/xp.png" alt="Logo da XP" class="logo-xp"></logo>
+      <a class="nav-bar-item-1" href="">
+        <p>Minha Conta</p>
+        <img src="./img/Vector.png" alt="Acessar conta">
+      </a>
+    </nav>
+  </header>
+  <main>
+    <div class="buscador">
+      <h2>Buscar usuário</h2>
+      <form action="dashboard.html">
+        <label for="nome">Selecione o cliente: <br></label>
+        <select name="cliente" id="cliente" required>
+        </select>
+        <br><br>
+        <input type="submit" value="BUSCAR">
+      </form>
+    </div>
+    <div class="quadrado-lateral"></div>
+  </main>
+  <div id="text"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

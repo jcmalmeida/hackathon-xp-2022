@@ -1,0 +1,347 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e5e5e5;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 714px;
+  height: 32px;
+  left: 84px;
+  top: 32px;
+}
+
+nav .logo-xp {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+nav .nav-bar-item-1 {
+  position: absolute;
+  height: 24px;
+  left: 70px;
+}
+
+nav .nav-bar-item-2 {
+  position: absolute;
+  height: 24px;
+  left: 222px;
+}
+
+nav .nav-bar-item-3 {
+  position: absolute;
+  height: 24px;
+  left: 360px;
+}
+
+nav .nav-bar-item-4 {
+  position: absolute;
+  height: 24px;
+  left: 468px;
+}
+
+nav .nav-bar-item-5 {
+  position: absolute;
+  height: 24px;
+  left: 626px;
+}
+
+nav a p {
+  height: 24px;
+  left: 164px;
+  top: 36px;
+
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  color: #3d3d3d;
+}
+
+nav a img {
+  margin-left: 4px;
+}
+
+.dados-pessoais {
+  position: absolute;
+  width: 620px;
+  height: 216px;
+  left: 84px;
+  top: 112px;
+  background: #ffffff;
+  border-radius: 16px;
+}
+
+.dados-pessoais-container {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
+
+.dados-pessoais-container h2 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #3d3d3d;
+}
+
+.dados-pessoais-container .data-nascimento {
+  top: 44px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+}
+
+.dados-pessoais-container .cpf {
+  top: 72px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+}
+
+.dados-pessoais-container .salario {
+  top: 100px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+}
+
+.investimento-principal {
+  position: absolute;
+  width: 620px;
+  height: 216px;
+  left: 736px;
+  top: 112px;
+  background: #3d3d3d;
+  border-radius: 16px;
+}
+
+.investimento-principal-container {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
+
+.investimento-principal-container h2 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #f0f0f0;
+}
+
+.investimento-principal-container .principal-investimento {
+  top: 44px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 72px;
+  color: #ffc709;
+}
+
+.investimento-principal-container .percentual-principal-investimento {
+  top: 112px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f0f0f0;
+}
+
+.consolidado {
+  position: absolute;
+  left: 84px;
+  top: 360px;
+}
+
+#card1 {
+  position: absolute;
+  width: 294px;
+  height: 152px;
+  left: 0px;
+  background: #ffffff;
+  border-radius: 16px;
+}
+
+.cardB div {
+  position: absolute;
+  left: 10.88%;
+  right: 10.88%;
+  top: 15.13%;
+  bottom: 15.13%;
+}
+
+.cardB .instituicao {
+  position: absolute;
+  top: 5px;
+
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #3d3d3d;
+}
+
+.cardB .logo {
+  position: absolute;
+  left: 85%;
+  top: 0%;
+
+  /*
+  background: url(Camada 1.png);
+  */
+}
+
+.cardB .dados_instituicao {
+  position: absolute;
+  top: 30px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 15px;
+
+  color: #666666;
+}
+
+.cardB .valor {
+  position: absolute;
+  top: 70px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: #666666;
+}
+
+#card2 {
+  position: absolute;
+  width: 294px;
+  height: 152px;
+  left: 326px;
+  background: #ffffff;
+  border-radius: 16px;
+}
+
+#card3 {
+  position: absolute;
+  width: 294px;
+  height: 152px;
+  left: 652px;
+  background: #ffffff;
+  border-radius: 16px;
+}
+
+#card4 {
+  position: absolute;
+  width: 294px;
+  height: 152px;
+  left: 978px;
+  background: #ffffff;
+  border-radius: 16px;
+}
+
+.investimentos {
+  position: absolute;
+  width: 620px;
+  height: 820px;
+  left: 84px;
+  top: 544px;
+  background: #ffc709;
+  border-radius: 16px;
+}
+
+.investimentos .titulo-investimentos {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #3d3d3d;
+}
+
+.blocos-investimentos {
+  position: absolute;
+  top: 92px;
+  height: 688px;
+  width: 620px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bloco-tipo-investimento {
+  width: 540px;
+  height: 48px;
+  background: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bloco-tipo-investimento .tipo-investimento {
+  padding-left: 23px;
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+}
+
+.bloco-tipo-investimento .valor-investimento {
+  padding-right: 24px;
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+}
+
+footer {
+  position: absolute;
+  margin-top: 52px;
+}
