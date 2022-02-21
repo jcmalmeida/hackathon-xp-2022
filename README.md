@@ -14,8 +14,9 @@ Foi feito um app web em que o Acessor entra com o seu cadastro e verifica os dad
 ## Alterando clientes
 
 Ja esta pré-configurado com nomes apenas femininos do mock(mock2.json) que fizemos da API para alterar para o mock(mock.json) com nomes masculinos é só alterar nos dois arquivos JavaScript e estão nas linhas:
-script.js :linha 6
-script2.js : linha 21
+<!--ts-->
+   * script.js :linha 6
+   * script2.js : linha 21
 
 ## Linguagens
 
