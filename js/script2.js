@@ -2,11 +2,17 @@ let json_data
 let nome_Clientes
 let dados_Cliente
 let nome_Cliente
-let investimentos_Banco1
-let investimentos_Banco2
-let investimentos_Banco3
-let investimentos_Banco4
+let investimentos_Banco1 = []
+let investimentos_Banco2 = []
+let investimentos_Banco3 = []
+let investimentos_Banco4 = []
 
+document.getElementById('card1').addEventListener('click', () => atualiza_dados_Banco1())
+document.getElementById('card2').addEventListener('click', () => atualiza_dados_Banco2())
+document.getElementById('card3').addEventListener('click', () => atualiza_dados_Banco3())
+document.getElementById('card4').addEventListener('click', () => atualiza_dados_Banco4())
+
+// Coleta parâmetro de nome do cliente passado via URL
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString)
 nome_Cliente = urlParams.get('cliente')
@@ -146,11 +152,152 @@ function atualiza_Dados_Dashboard() {
   console.log(soma_total_investimentos.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}))
 
   let soma_total_investimentos_tipo = [0, 0, 0]
+  let maior_investimento = investimentos_Banco1[2] + investimentos_Banco2[2] + investimentos_Banco3[2] + investimentos_Banco4[2]
+  let indice_maior_investimento = 0
   for(let i = 2; i < investimentos_Banco1.length; i++) {
     soma_total_investimentos_tipo[i] = investimentos_Banco1[i] + investimentos_Banco2[i] + investimentos_Banco3[i] + investimentos_Banco4[i]
-    console.log(soma_total_investimentos_tipo[i])
+    if (soma_total_investimentos_tipo[i] > maior_investimento) {
+      maior_investimento = soma_total_investimentos_tipo[i]
+      indice_maior_investimento = i
+    }
   }
-  
-  console.log(parseInt(soma_total_investimentos_tipo))
-  console.log(Math.max(parseInt(soma_total_investimentos_tipo)))
+  console.log(soma_total_investimentos_tipo)
+  console.log(maior_investimento.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}))
+  console.log(indice_maior_investimento)
+
+  document.getElementById('percentual-principal-investimento').innerHTML =
+    ("(" + (parseInt(maior_investimento / soma_total_investimentos * 100)) + "% dos investimentos)")
+  switch(indice_maior_investimento) {
+    case 2:
+      document.getElementById('principal-investimento').innerHTML = "Poupança"
+      break
+    case 3:
+      document.getElementById('principal-investimento').innerHTML = "Ações"
+      break
+    case 4:
+      document.getElementById('principal-investimento').innerHTML = "CDB"
+      break
+    case 5:
+      document.getElementById('principal-investimento').innerHTML = "LCI"
+      break
+    case 6:
+      document.getElementById('principal-investimento').innerHTML = "LCA"
+      break
+    case 7:
+      document.getElementById('principal-investimento').innerHTML = "CRI"
+      break
+    case 8:
+      document.getElementById('principal-investimento').innerHTML = "CRA"
+      break
+    case 9:
+      document.getElementById('principal-investimento').innerHTML = "FII's"
+      break
+    case 10:
+      document.getElementById('principal-investimento').innerHTML = "Fundos de renda fixa"
+      break
+    case 11:
+      document.getElementById('principal-investimento').innerHTML = "Fundos de renda variável"
+      break
+    case 12:
+      document.getElementById('principal-investimento').innerHTML = "Fundos multimercado"
+      break
+}
+
+document.getElementById('indice-suitability').innerHTML = investimentos_Banco1[1]
+document.getElementById('poupanca').innerHTML = investimentos_Banco1[2].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+document.getElementById('acoes').innerHTML = investimentos_Banco1[3].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+document.getElementById('cdb').innerHTML = investimentos_Banco1[4].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+document.getElementById('lci').innerHTML = investimentos_Banco1[5].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+document.getElementById('lca').innerHTML = investimentos_Banco1[6].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+document.getElementById('cri').innerHTML = investimentos_Banco1[7].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+document.getElementById('cra').innerHTML = investimentos_Banco1[8].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+document.getElementById('fiis').innerHTML = investimentos_Banco1[9].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+document.getElementById('frf').innerHTML = investimentos_Banco1[10].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+document.getElementById('frv').innerHTML = investimentos_Banco1[11].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+document.getElementById('fmm').innerHTML = investimentos_Banco1[12].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+document.getElementById('card1').style.border = '4px solid #ffc709';
+}
+
+function atualiza_dados_Banco1() {
+  if(investimentos_Banco1.length > 1) {
+    document.getElementById('indice-suitability').innerHTML = investimentos_Banco1[1]
+    document.getElementById('poupanca').innerHTML = investimentos_Banco1[2].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('acoes').innerHTML = investimentos_Banco1[3].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('cdb').innerHTML = investimentos_Banco1[4].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('lci').innerHTML = investimentos_Banco1[5].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('lca').innerHTML = investimentos_Banco1[6].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('cri').innerHTML = investimentos_Banco1[7].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('cra').innerHTML = investimentos_Banco1[8].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('fiis').innerHTML = investimentos_Banco1[9].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('frf').innerHTML = investimentos_Banco1[10].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('frv').innerHTML = investimentos_Banco1[11].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('fmm').innerHTML = investimentos_Banco1[12].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('card1').style.border = '4px solid #ffc709';
+    document.getElementById('card2').style.border = 'none';
+    document.getElementById('card3').style.border = 'none';
+    document.getElementById('card4').style.border = 'none';
+  }
+}
+
+function atualiza_dados_Banco2() {
+  if(investimentos_Banco2.length > 1) {
+    document.getElementById('indice-suitability').innerHTML = investimentos_Banco2[1]
+    document.getElementById('poupanca').innerHTML = investimentos_Banco2[2].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('acoes').innerHTML = investimentos_Banco2[3].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('cdb').innerHTML = investimentos_Banco2[4].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('lci').innerHTML = investimentos_Banco2[5].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('lca').innerHTML = investimentos_Banco2[6].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('cri').innerHTML = investimentos_Banco2[7].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('cra').innerHTML = investimentos_Banco2[8].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('fiis').innerHTML = investimentos_Banco2[9].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('frf').innerHTML = investimentos_Banco2[10].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('frv').innerHTML = investimentos_Banco2[11].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('fmm').innerHTML = investimentos_Banco2[12].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('card1').style.border = 'none';
+    document.getElementById('card2').style.border = '4px solid #ffc709';
+    document.getElementById('card3').style.border = 'none';
+    document.getElementById('card4').style.border = 'none';
+  }
+}
+
+function atualiza_dados_Banco3() {
+  if(investimentos_Banco3.length > 1) {
+    document.getElementById('indice-suitability').innerHTML = investimentos_Banco3[1]
+    document.getElementById('poupanca').innerHTML = investimentos_Banco3[2].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('acoes').innerHTML = investimentos_Banco3[3].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('cdb').innerHTML = investimentos_Banco3[4].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('lci').innerHTML = investimentos_Banco3[5].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('lca').innerHTML = investimentos_Banco3[6].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('cri').innerHTML = investimentos_Banco3[7].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('cra').innerHTML = investimentos_Banco3[8].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('fiis').innerHTML = investimentos_Banco3[9].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('frf').innerHTML = investimentos_Banco3[10].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('frv').innerHTML = investimentos_Banco3[11].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('fmm').innerHTML = investimentos_Banco3[12].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('card1').style.border = 'none';
+    document.getElementById('card2').style.border = 'none';
+    document.getElementById('card3').style.border = '4px solid #ffc709';
+    document.getElementById('card4').style.border = 'none';
+  }
+}
+
+function atualiza_dados_Banco4() {
+  if(investimentos_Banco4.length > 1) {
+    document.getElementById('indice-suitability').innerHTML = investimentos_Banco4[1]
+    document.getElementById('poupanca').innerHTML = investimentos_Banco4[2].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('acoes').innerHTML = investimentos_Banco4[3].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('cdb').innerHTML = investimentos_Banco4[4].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('lci').innerHTML = investimentos_Banco4[5].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('lca').innerHTML = investimentos_Banco4[6].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('cri').innerHTML = investimentos_Banco4[7].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('cra').innerHTML = investimentos_Banco4[8].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('fiis').innerHTML = investimentos_Banco4[9].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('frf').innerHTML = investimentos_Banco4[10].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('frv').innerHTML = investimentos_Banco4[11].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('fmm').innerHTML = investimentos_Banco4[12].toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('card1').style.border = 'none';
+    document.getElementById('card2').style.border = 'none';
+    document.getElementById('card3').style.border = 'none';
+    document.getElementById('card4').style.border = '4px solid #ffc709';
+  }
 }
