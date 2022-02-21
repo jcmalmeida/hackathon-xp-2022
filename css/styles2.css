@@ -347,5 +347,7 @@ nav a img {
 
 footer {
   position: absolute;
-  margin-top: 52px;
+  top: 1364px;
+  height: 52px;
+  width: 1000px;
 }
