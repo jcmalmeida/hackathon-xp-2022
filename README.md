@@ -37,4 +37,4 @@ O grupo foi feito e coincidentemente o primeiro hackaton de todos e todos estuda
 - [Murilo Rodrigues](https://www.linkedin.com/in/murilorodrigueswebdev/) 
 - [Laura Paulino](https://www.linkedin.com/in/laurapaulinodesouza/) 
 - [Richard Kullkamp](https://www.linkedin.com/in/richardkulkamp/)
-- [Amanda Gomes]()
+- [Amanda Gomes](https://www.linkedin.com/in/amanda-gomes-0ba88b20b/)
