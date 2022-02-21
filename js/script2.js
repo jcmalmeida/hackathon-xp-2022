@@ -154,3 +154,32 @@ function atualiza_Dados_Dashboard() {
   console.log(parseInt(soma_total_investimentos_tipo))
   console.log(Math.max(parseInt(soma_total_investimentos_tipo)))
 }
+
+$.getJSON("mock2.json", function(data) {
+  json_data = data
+  console.log(json_data)
+  nome_Bancos = selecionaBanco()
+  console.log(nome_Bancos)
+  mostrar_Nomes_Bancos(nome_Bancos)
+
+  //document.getElementById('text').innerHTML = perfil_Investimentos
+});
+
+function selecionaBanco() {
+  let vetor_bancos = []
+  for(let i = 0; i < json_data.length; i++) {
+    vetor_bancos.push(json_data[i]['bankId'])
+  }
+  return vetor_bancos
+}
+
+function mostrar_Nomes_Bancos(nome_Bancos) {
+  for(let i = 0; i < nome_Bancos.length; i++) {
+    const node = document.createElement("card1")
+    const textnode = document.createTextNode(nome_Bancos[i])
+    node.appendChild(textnode);
+    node.setAttribute('value', nome_Bancos[i])
+    document.getElementById('card1').appendChild(node);
+  }
+  console.log(document.getElementById('card1'))
+}
