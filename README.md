@@ -1,37 +1,28 @@
-# Hackathon-xp-2022
+# Hackathon XP Investimentos 2022
 
-## Open Finance B2B
+## 🏆 2o lugar no Desafio B2B
 
-Este projeto foi desenvolvido para criar uma dashboard em que os escritórios afiliados XP possam utilizar em conseguir a nova implementação no mercado financeiro, onde de acordo com as regras de negócio e a LGPD (Lei Geral de Proteção de Dados) está firmada para um melhor traçado do povo brasileiro em conseguir ter um melhor controle de suas finanças.
-Também conhecido como Open Banking o nome totalmente sugestivo o seu significado, será possível se o cliente permitir compartilhar seus dados bancários/financeiros de todos os bancos e investidoras que ele possui conta, dando melhor suporte ao assessor de investimentos em indicar os melhores caminhos para o seu cliente.
+Este projeto foi desenvolvido durante o Hackathon organizado pela XP Investimentos e Shawee em fevereiro de 2022. A proposta do desafio B2B era utilizar dados fictícios de Open Finance disponibilizados por uma API para criar uma proposta de valor voltada aos escritórios de investimentos filiados à XP.
 
+Neste projeto foi desenvolvido o protótipo de um dashboard que permite a consolidação de todos os dados de investimentos (bancos, corretoras, etc) disponibilizados pelos clientes que autorizarem o compartilhamento por meio do Open Finance. A partir destas informações, o assessor de investimentos tem um panorama geral e pode indicar os melhores produtos financeiros de acordo com o perfil de cada cliente.
 
-## Sobre o trabalho desenvolvido:
+![image](https://user-images.githubusercontent.com/26752229/227038123-b0a1d91f-534f-43c7-b8dd-7ca5a8c3197c.png)
+[Link para o vídeo da proposta e premiação (Youtube)](https://youtu.be/KFvIVN9-zGc?t=977)
 
+## Sobre o trabalho desenvolvido
 
-Foi feito um app web em que o Assessor entra com o seu cadastro e verifica os dados de todos os seus clientes que aderiram ao Open Finance, usando os dados das APIs disponibilizados exclusivamente para o hackaton. Por questões de força maior como explicado logo abaixo (falta de tempo) a API REST não foi totalmente desenvolvida e funcional, mas fizemos um banco mocado para a inserção de alguns dados da nossa página.
+As telas foram projetadas no Figma. Por conta de uma limitação da API disponibilizada durante o hackathon, o grupo optou por utilizar um mock do JSON consumido.
 
-## Alterando clientes
+### Tecnologias utilizadas:
 
-Ja esta pré-configurado com nomes apenas femininos do mock(mock2.json) que fizemos da API para alterar para o mock(mock.json) com nomes masculinos é só alterar nos dois arquivos JavaScript e estão nas linhas:
-<!--ts-->
-   * script.js :linha 6
-   * script2.js : linha 21
-
-## Linguagens
-
-<!--ts-->
+   * Figma
    * HTML
    * CSS
    * JAVASCRIPT
 
-
-## Conclusão
-
-O grupo foi feito e coincidentemente o primeiro hackaton de todos e todos estudantes iniciantes em transição de carreira ou iniciando a carreira na tecnologia. Apesar das dificuldades e complicações conseguimos achar uma solução e projetamos estas telas de login e dashboard primeiramente no figma e implantamos o código em seguida.
-
-
 ## Integrantes do grupo
+
+Todos os integrantes do grupo formado coincidentemente estavam participando de seu primeiro hackaton, sendo estudantes iniciantes na área de tecnologia ou em transição de carreira.
 
 - [João Almeida](https://www.linkedin.com/in/jcmalmeida/)
 - [Murilo Rodrigues](https://www.linkedin.com/in/murilorodrigueswebdev/) 
